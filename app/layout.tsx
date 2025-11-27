@@ -24,15 +24,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const data = getDocuments();
-  console.log(data);
+  const docs = getDocuments();
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="h-full lg:ml-72 xl:ml-80">
-          <Header />
+          <Header docs={docs} />
           <div className="relative px-4 pt-14 sm:px-6 lg:px-8">
             <main className="flex-auto py-12">
               {/* <!-- Green Top Overlay --> */}

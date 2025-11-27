@@ -5,7 +5,7 @@ import Sidebar from './Sidebar'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const Header = () => {
+const Header = ({docs}) => {
   return (
     <header
       className="fixed inset-y-0 left-0 z-40 contents w-72 overflow-y-auto border-r border-zinc-900/10 px-6 pb-8 pt-4 dark:border-white/10 lg:block xl:w-80">
@@ -26,9 +26,7 @@ const Header = () => {
               aria-label="Toggle navigation">
               <Image src="/hamburger.svg" alt="Menu" className="w-2.5 stroke-zinc-900 dark:stroke-white" width={32} height={30} />
             </button>
-            <Link aria-label="Home" href="/">
-              <Image src="/logo.svg" alt="Protocol" className="h-6" width={100} height={30} />
-            </Link>
+            <Logo/>
           </div>
           {/* <!-- Mobile Responsive Header Ends --> */}
 
@@ -39,7 +37,7 @@ const Header = () => {
                 <button type="button"
                   className="focus:[&amp;:not(:focus-visible)]:outline-none flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5 lg:hidden"
                   aria-label="Find something...">
-                  <img src="./assets/icons/search.svg" alt="Search" className="h-5 w-5" />
+                  <Image src="/search.svg" alt="Search"  height={20} width={20}  />
                 </button>
               </div>
             </div>
@@ -49,7 +47,7 @@ const Header = () => {
       {/* <!-- Header Ends --> */}
 
       {/* <!-- sidebar nav --> */}
-      <Sidebar/>
+      <Sidebar docs={docs}/>
     </header>
   )
 }
