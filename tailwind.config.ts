@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+import typography from "./typography.cjs"
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -23,8 +26,8 @@ module.exports = {
       "8xl": ["6rem", { lineHeight: "1" }],
       "9xl": ["8rem", { lineHeight: "1" }],
     },
-    typography: import("./typography"),
     extend: {
+      typography: typography,
       colors: {
         lighterDark: "#0F172A",
         dark: "#0B1120",
@@ -52,7 +55,9 @@ module.exports = {
     },
   },
   plugins: [
-    import("@tailwindcss/typography"),
-    import("@tailwindcss/aspect-ratio"),
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    require("@tailwindcss/typography"),
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    require("@tailwindcss/aspect-ratio"),
   ],
-};
+}
