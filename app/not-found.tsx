@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function NotFound() {
   return (
-    <div className="relative flex flex-col h-[calc(100vh-200px)] items-center justify-center overflow-hidden bg-white py-6 sm:py-12 dark:bg-slate-950">
+    <div className="relative flex flex-col h-[calc(100vh-200px)] items-center justify-center overflow-hidden py-6 sm:py-12 dark:bg-slate-950">
       {/* Decorative Background Blob - Adjust colors if needed */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -left-[40%] -top-[30%] h-[500px] w-[500px] rounded-full bg-gradient-to-br from-violet-400/20 to-transparent blur-[100px] dark:from-violet-900/40" />

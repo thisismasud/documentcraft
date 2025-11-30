@@ -1,5 +1,6 @@
 import { getDocumentsContent } from "@/lib/doc";
 import Link from "next/link";
+import LinkHandler from "./LinkHandler";
 import Tag from "./Tag";
 
 const ContentDisplay = async ({ id }) => {
@@ -21,9 +22,7 @@ const ContentDisplay = async ({ id }) => {
         category
       </div>
       <div>{tags && tags.map((tag) => <Tag key={tag} tag={tag} />)}</div>
-      <div
-        className=""
-        dangerouslySetInnerHTML={{__html: documentContent.contentHtml}} />
+      <LinkHandler htmlContent={documentContent.contentHtml} />
     </article>
   );
 };
