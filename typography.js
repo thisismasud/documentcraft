@@ -41,10 +41,11 @@ module.exports = ({ theme }) => ({
       color: "var(--tw-prose-body)",
       fontSize: theme("fontSize.sm")[0],
       lineHeight: theme("lineHeight.7"),
+      maxWidth: "none",
 
       // Layout
       "> *": {
-        maxWidth: theme("maxWidth.2xl"),
+        maxWidth: theme("maxWidth.6xl"),
         marginLeft: "auto",
         marginRight: "auto",
         "@screen lg": {

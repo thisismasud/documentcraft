@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-import typography from "./typography.cjs"
+import typography from "./typography.js"
 
 module.exports = {
   content: [
@@ -54,10 +54,4 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    require("@tailwindcss/typography"),
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    require("@tailwindcss/aspect-ratio"),
-  ],
 }

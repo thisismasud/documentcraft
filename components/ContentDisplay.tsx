@@ -7,7 +7,7 @@ const ContentDisplay = async ({ id }) => {
   const { title, date, author, category, tags } = documentContent;
 
   return (
-    <article className="prose dark:prose-invert">
+    <article className="prose dark:prose-invert ">
       <h1 className="text-2xl font-bold">{title}</h1>
       <div className="mb-2">
         <span>Published On: {date} </span> by{" "}
