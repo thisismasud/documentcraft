@@ -25,6 +25,7 @@ const LinkHandler = ({ htmlContent }: LinkHandlerClientProps) => {
       }
       e.preventDefault();
       router.push(href);
+      }
 
       links.forEach((link) => {
         link.removeEventListener("click", handleClick as EventListener);
@@ -36,7 +37,7 @@ const LinkHandler = ({ htmlContent }: LinkHandlerClientProps) => {
           link.removeEventListener("click", handleClick as EventListener);
         });
       };
-    };
+    ;
   }, [router, htmlContent]);
 
   return (

@@ -12,11 +12,11 @@ const ContentDisplay = async ({ id }) => {
       <h1 className="text-2xl font-bold">{title}</h1>
       <div className="mb-2">
         <span>Published On: {date} </span> by{" "}
-        <Link className="text-indigo-500" href={`/author/${author}`}>
+        <Link className="text-indigo-500" href={`/authors/${author}`}>
           {author}
         </Link>{" "}
         under the{" "}
-        <Link className="text-indigo-500" href={`/category/${category}`}>
+        <Link className="text-indigo-500" href={`/categories/${category}`}>
           {category}
         </Link>{" "}
         category
