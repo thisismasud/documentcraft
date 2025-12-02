@@ -9,5 +9,5 @@ export function getDocumentsByAuthor(docs: DocsType[], author: string){
 }
 
 export function getDocumentsByTag(docs: DocsType[], tag: string){
-    return docs.filter((doc) => doc.tags.some(tag => tag === tag))
+    return docs.filter((doc) => doc.tags.some(singleTag => singleTag === tag))
 }
