@@ -50,6 +50,7 @@ const Sidebar = ({ docs }: { docs: DocsType[] }) => {
                                 href={`/docs/${rootNode.id}/${subRoot.id}`}
                             >
                                 <span className="truncate">{subRoot.title}</span>
+                                
                             </Link>
                         </li>
                     ))}
